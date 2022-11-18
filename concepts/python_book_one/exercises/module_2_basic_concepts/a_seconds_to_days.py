@@ -1,8 +1,4 @@
-def seconds_to_days() -> float:
-    seconds: int = eval(
-        input("Insert the number of seconds that you want to calculate:\n-> ")
-    )
-
+def calculate_seconds_to_days(seconds: int) -> int | float:
     base_seconds = 60
     base_minutes = 1 * base_seconds
     base_hour = base_minutes * base_seconds
@@ -11,3 +7,11 @@ def seconds_to_days() -> float:
     total_days = seconds / base_day
 
     return total_days
+
+
+def seconds_to_days() -> float:
+    seconds: int = eval(
+        input("Insert the number of seconds that you want to calculate:\n-> ")
+    )
+
+    return calculate_seconds_to_days(seconds)
