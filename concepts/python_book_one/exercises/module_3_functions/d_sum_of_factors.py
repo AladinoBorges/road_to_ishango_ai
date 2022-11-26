@@ -1,5 +1,5 @@
-def number_of_factors(value: int) -> int:
-    values = 0
+def sum_of_factors(value: int) -> int:
+    result = 0
     iteration = 1
 
     if not isinstance(value, int) or value < 0:
@@ -7,9 +7,10 @@ def number_of_factors(value: int) -> int:
 
     while iteration <= value:
         if value % iteration == 0:
-            values = values + 1
+            result = result + iteration
+
             iteration = iteration + 1
         else:
             iteration = iteration + 1
 
-    return values
+    return result
