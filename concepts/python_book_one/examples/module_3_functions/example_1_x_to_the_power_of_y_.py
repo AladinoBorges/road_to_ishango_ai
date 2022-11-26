@@ -13,7 +13,7 @@ def handle_exceptions(
     return {"with_value_success": False}
 
 
-def potencial(base: int | float, exponent: int = 0) -> int | float | ValueError:
+def potential(base: int | float, exponent: int = 0) -> int | float | ValueError:
     are_values_valid = handle_exceptions(base, exponent)
 
     if are_values_valid["with_value_success"]:
