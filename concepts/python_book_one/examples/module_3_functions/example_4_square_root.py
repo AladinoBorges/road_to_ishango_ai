@@ -25,7 +25,10 @@ def next_guess(value: int | float, guess: int | float) -> int | float:
     return result
 
 
-def square_root(value: int | float, guess: int | float = 1) -> int | float:
+def square_root(value: int | float, guess: int | float = 1) -> int | float | ValueError:
+    if value < 0:
+        raise ValueError("value needs to be a number greater or equal to zero.")
+
     while not is_great_guess_based_on_limiar_error(value, guess):
         guess = next_guess(value, guess)
 
