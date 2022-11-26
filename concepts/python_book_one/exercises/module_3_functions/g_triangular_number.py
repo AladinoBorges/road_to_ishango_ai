@@ -1,4 +1,4 @@
-def is_triangular(value: int) -> bool:
+def is_triangular(value: int) -> ValueError | bool:
     if not isinstance(value, int):
         raise ValueError("value needs to be a positive integer.")
 
